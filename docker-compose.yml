@@ -1,21 +1,28 @@
-version: '3.8'
-
 services:
+  # Service untuk aplikasi web
   item-app:
+    # Image yang diambil dari GitHub Container Registry
     image: ghcr.io/annasmarv/item-app:v1
     container_name: item-app
+    # Selalu restart container jika terhenti tiba-tiba
     restart: always
+    # Mapping port 80 di host ke port 8080 di container
     ports:
       - "80:8080"
+    # Memastikan item-app hanya jalan setelah item-db siap
     depends_on:
       - item-db
 
+  # Service untuk database MongoDB
   item-db:
+    # Menggunakan image resmi mongo
     image: mongo:3
     container_name: item-db
     restart: always
+    # Menyimpan data database ke volume agar tidak hilang saat container dihapus
     volumes:
       - app-db:/data/db
 
+# Definisi volume untuk penyimpanan data database
 volumes:
   app-db:

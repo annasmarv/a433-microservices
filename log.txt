@@ -1,3 +1,21 @@
+item-app  | 
+item-app  | > docker-software-delivery@1.0.0 start /app
+item-app  | > node ./bin/www
+item-app  | 
+item-app  | NODE_ENV: production
+item-app  | Connected to database
+item-app  | 
+item-app  | > docker-software-delivery@1.0.0 start /app
+item-app  | > node ./bin/www
+item-app  | 
+item-app  | NODE_ENV: production
+item-app  | Connected to database
+item-app  | 
+item-app  | > docker-software-delivery@1.0.0 start /app
+item-app  | > node ./bin/www
+item-app  | 
+item-app  | NODE_ENV: production
+item-app  | Connected to database
 item-db   | 2026-03-30T15:50:21.431+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=3212d6beaf56
 item-db   | 2026-03-30T15:50:21.431+0000 I CONTROL  [initandlisten] db version v3.6.23
 item-db   | 2026-03-30T15:50:21.431+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
@@ -10,12 +28,6 @@ item-db   | 2026-03-30T15:50:21.431+0000 I CONTROL  [initandlisten]     distarch
 item-db   | 2026-03-30T15:50:21.431+0000 I CONTROL  [initandlisten]     target_arch: x86_64
 item-db   | 2026-03-30T15:50:21.431+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
 item-db   | 2026-03-30T15:50:21.433+0000 I STORAGE  [initandlisten] 
-item-app  | 
-item-app  | > docker-software-delivery@1.0.0 start /app
-item-app  | > node ./bin/www
-item-app  | 
-item-app  | NODE_ENV: production
-item-app  | Connected to database
 item-db   | 2026-03-30T15:50:21.433+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
 item-db   | 2026-03-30T15:50:21.433+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
 item-db   | 2026-03-30T15:50:21.434+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3273M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
@@ -37,3 +49,81 @@ item-db   | 2026-03-30T15:50:21.764+0000 I INDEX    [LogicalSessionCacheRefresh]
 item-db   | 2026-03-30T15:50:21.765+0000 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
 item-db   | 2026-03-30T15:50:22.312+0000 I NETWORK  [listener] connection accepted from 172.19.0.3:59974 #1 (1 connection now open)
 item-db   | 2026-03-30T15:50:22.318+0000 I NETWORK  [conn1] received client metadata from 172.19.0.3:59974 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "6.6.87.2-microsoft-standard-WSL2" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
+item-db   | 2026-03-30T16:00:36.889+0000 I NETWORK  [conn1] end connection 172.19.0.3:59974 (0 connections now open)
+item-db   | 2026-03-30T16:00:37.281+0000 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+item-db   | 2026-03-30T16:00:37.286+0000 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+item-db   | 2026-03-30T16:00:37.286+0000 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+item-db   | 2026-03-30T16:00:37.287+0000 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+item-db   | 2026-03-30T16:00:37.290+0000 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+item-db   | 2026-03-30T16:00:37.347+0000 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+item-db   | 2026-03-30T16:00:37.347+0000 I CONTROL  [signalProcessingThread] now exiting
+item-db   | 2026-03-30T16:00:37.347+0000 I CONTROL  [signalProcessingThread] shutting down with code:0
+item-db   | 2026-03-30T16:00:38.859+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=3212d6beaf56
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten] db version v3.6.23
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten] modules: none
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten] build environment:
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten]     distarch: x86_64
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+item-db   | 2026-03-30T16:00:38.861+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+item-db   | 2026-03-30T16:00:38.862+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+item-db   | 2026-03-30T16:00:38.862+0000 I STORAGE  [initandlisten] 
+item-db   | 2026-03-30T16:00:38.862+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+item-db   | 2026-03-30T16:00:38.862+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+item-db   | 2026-03-30T16:00:38.862+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3273M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+item-db   | 2026-03-30T16:00:39.402+0000 I STORAGE  [initandlisten] WiredTiger message [1774886439:402534][1:0x7ef76fdeda40], txn-recover: Main recovery loop: starting at 1/23296
+item-db   | 2026-03-30T16:00:39.456+0000 I STORAGE  [initandlisten] WiredTiger message [1774886439:456248][1:0x7ef76fdeda40], txn-recover: Recovering log 1 through 2
+item-db   | 2026-03-30T16:00:39.511+0000 I STORAGE  [initandlisten] WiredTiger message [1774886439:511255][1:0x7ef76fdeda40], txn-recover: Recovering log 2 through 2
+item-db   | 2026-03-30T16:00:39.536+0000 I STORAGE  [initandlisten] WiredTiger message [1774886439:536647][1:0x7ef76fdeda40], txn-recover: Set global recovery timestamp: 0
+item-db   | 2026-03-30T16:00:39.563+0000 I CONTROL  [initandlisten] 
+item-db   | 2026-03-30T16:00:39.563+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+item-db   | 2026-03-30T16:00:39.563+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+item-db   | 2026-03-30T16:00:39.563+0000 I CONTROL  [initandlisten] 
+item-db   | 2026-03-30T16:00:39.570+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+item-db   | 2026-03-30T16:00:39.572+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
+item-db   | 2026-03-30T16:00:39.572+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
+item-db   | 2026-03-30T16:00:39.572+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+item-db   | 2026-03-30T16:00:39.989+0000 I NETWORK  [listener] connection accepted from 172.19.0.3:59522 #1 (1 connection now open)
+item-db   | 2026-03-30T16:00:39.996+0000 I NETWORK  [conn1] received client metadata from 172.19.0.3:59522 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "6.6.87.2-microsoft-standard-WSL2" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
+item-db   | 2026-03-30T16:00:40.143+0000 I NETWORK  [conn1] end connection 172.19.0.3:59522 (0 connections now open)
+item-db   | 2026-03-30T16:00:40.516+0000 I CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+item-db   | 2026-03-30T16:00:40.516+0000 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+item-db   | 2026-03-30T16:00:40.516+0000 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+item-db   | 2026-03-30T16:00:40.517+0000 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+item-db   | 2026-03-30T16:00:40.519+0000 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+item-db   | 2026-03-30T16:00:40.597+0000 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+item-db   | 2026-03-30T16:00:40.598+0000 I CONTROL  [signalProcessingThread] now exiting
+item-db   | 2026-03-30T16:00:40.598+0000 I CONTROL  [signalProcessingThread] shutting down with code:0
+item-db   | 2026-03-30T23:37:17.249+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=3212d6beaf56
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten] db version v3.6.23
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten] modules: none
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten] build environment:
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten]     distarch: x86_64
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+item-db   | 2026-03-30T23:37:17.253+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+item-db   | 2026-03-30T23:37:17.255+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+item-db   | 2026-03-30T23:37:17.256+0000 I STORAGE  [initandlisten] 
+item-db   | 2026-03-30T23:37:17.256+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+item-db   | 2026-03-30T23:37:17.256+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+item-db   | 2026-03-30T23:37:17.256+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3273M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+item-db   | 2026-03-30T23:37:18.085+0000 I STORAGE  [initandlisten] WiredTiger message [1774913838:85811][1:0x7599e4148a40], txn-recover: Main recovery loop: starting at 2/4736
+item-db   | 2026-03-30T23:37:18.156+0000 I STORAGE  [initandlisten] WiredTiger message [1774913838:155990][1:0x7599e4148a40], txn-recover: Recovering log 2 through 3
+item-db   | 2026-03-30T23:37:18.223+0000 I STORAGE  [initandlisten] WiredTiger message [1774913838:223512][1:0x7599e4148a40], txn-recover: Recovering log 3 through 3
+item-db   | 2026-03-30T23:37:18.256+0000 I STORAGE  [initandlisten] WiredTiger message [1774913838:256791][1:0x7599e4148a40], txn-recover: Set global recovery timestamp: 0
+item-db   | 2026-03-30T23:37:18.308+0000 I CONTROL  [initandlisten] 
+item-db   | 2026-03-30T23:37:18.308+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+item-db   | 2026-03-30T23:37:18.308+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+item-db   | 2026-03-30T23:37:18.308+0000 I CONTROL  [initandlisten] 
+item-db   | 2026-03-30T23:37:18.405+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+item-db   | 2026-03-30T23:37:18.406+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
+item-db   | 2026-03-30T23:37:18.406+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
+item-db   | 2026-03-30T23:37:18.406+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+item-db   | 2026-03-30T23:37:18.910+0000 I NETWORK  [listener] connection accepted from 172.19.0.3:49948 #1 (1 connection now open)
+item-db   | 2026-03-30T23:37:18.918+0000 I NETWORK  [conn1] received client metadata from 172.19.0.3:49948 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "6.6.87.2-microsoft-standard-WSL2" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
