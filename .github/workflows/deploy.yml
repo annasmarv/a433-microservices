@@ -1,36 +1,49 @@
-name: CI Backend Karsa Jobs
+name: CI Backend Karsajobs
 
 on:
   push:
     branches: [ "karsajobs" ]
 
+env:
+  # Mengatasi peringatan deprecation Node.js 20 di tahun 2026
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository_owner }}/karsajobs
+
 jobs:
   pipeline:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4 
+    # Menambahkan izin eksplisit untuk membaca konten dan menulis paket
+    permissions:
+      contents: read
+      packages: write
 
-      # Kriteria Saran: Lint Dockerfile
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Lint Dockerfile menggunakan Hadolint
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: Dockerfile
 
-      # Kriteria Saran: Unit Test Backend
+      # Unit Testing untuk Backend Go
       - name: Run Backend Tests
         run: go test -v -short --count=1 $(go list ./...)
 
-      # Login ke GitHub Packages (GHCR)
-      - name: Login to GHCR
+      # Login ke GitHub Container Registry
+      - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and Push
-        uses: docker/build-push-action@v5 
+      # Build dan Push Image ke GHCR
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/karsajobs:latest
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
